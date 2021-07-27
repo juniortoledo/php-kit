@@ -1,0 +1,3 @@
+vendor/
+#app/Controllers/MigrationController.php
+#app/Controllers/CreateController.php
