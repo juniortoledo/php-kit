@@ -18,6 +18,5 @@
     "league/plates": "^3.4",
     "coffeecode/router": "^1.0",
     "opis/database": "^4.0",
-    "coffeecode/uploader": "^1.0"
   }
 }
