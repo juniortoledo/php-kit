@@ -22,7 +22,6 @@ composer install
 | Package | Docs |
 | ------ | ------ |
 | coffeecode/route | https://github.com/robsonvleite/router |
-| coffeecode/uploade | https://github.com/robsonvleite/uploader |
 | opis/database  | https://opis.io/database/4.x/ |
 | league/plates | https://github.com/thephpleague/plates |
 
