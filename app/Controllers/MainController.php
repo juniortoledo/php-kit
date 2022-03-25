@@ -3,18 +3,9 @@
 namespace App\Controllers;
 
 use App\Utils\View;
-use App\Models\CrudModel;
-use App\Controllers\UploadController;
 
 class MainController extends View
 {
-  private $crud;
-  public function __construct()
-  {
-    $this->crud = new CrudModel();
-    parent::__construct();
-  }
-
   /** view home */
   public function home()
   {
@@ -26,12 +17,5 @@ class MainController extends View
   {
     echo $this->view->render('web/error');
   }
-
-   /** view controller */
-   public function controller()
-   {
-     echo $this->view->render('web/controller');
-   }
-
 }
     
