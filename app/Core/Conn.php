@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Database;
+namespace App\Core;
 
 use Opis\Database\Database;
 use Opis\Database\Connection;

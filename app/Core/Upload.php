@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Core;
 
-class UploadController
+class Upload
 {
   /**
    * $files recebe um array
@@ -12,14 +12,15 @@ class UploadController
   {
     $extensao = strtolower(substr($data['name'], -5)); //pega a extensao do arquivo
     $novo_nome = md5(time()) . $extensao; //define o nome do arquivo
-    $diretorio = "upload/"; //define o diretorio para onde enviaremos o arquivo
+    $diretorio = ASSETS . "upload/"; //define o diretorio para onde enviaremos o arquivo
 
     move_uploaded_file($data['tmp_name'], $diretorio . $novo_nome); //efetua o upload
 
     return $novo_nome;
   }
 
-  public function delete($name) {
-    unlink('upload'.'/'.$name);
+  public function delete($name)
+  {
+    unlink(ASSETS . 'upload' . '/' . $name);
   }
 }

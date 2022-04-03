@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Models;
+namespace App\Core;
 
 use App\Database\Conn;
 
-class CrudModel extends Conn
+class Model extends Conn
 {
   /** 
    * método para atualizar informações
@@ -43,10 +43,25 @@ class CrudModel extends Conn
   public function read($table, $column, $value)
   {
     $res = $this->db()
-    ->from($table)
-    ->where($column)->is($value)
-    ->select()
-    ->all();
+      ->from($table)
+      ->where($column)->is($value)
+      ->select()
+      ->all();
+
+    return $res;
+  }
+
+  /** 
+   * método para leitura das informações
+   * $table recebe o nome da tabela
+   * recebe nome da table, nome da coluna e id
+   */
+  public function readAll($table)
+  {
+    $res = $this->db()
+      ->from($table)
+      ->select()
+      ->all();
 
     return $res;
   }
@@ -57,9 +72,9 @@ class CrudModel extends Conn
   public function delete($table, $id)
   {
     $res = $this->db()
-    ->from($table)
-    ->where('id')->is($id)
-    ->delete();
+      ->from($table)
+      ->where('id')->is($id)
+      ->delete();
 
     return $res;
   }

@@ -16,17 +16,13 @@ class Routing
     $this->router->namespace('App\Controllers');
 
     //web
-    $this->router->get('/', 'MainController:home');
+    $this->router->get('/', 'Main:index');
 
     //erros
-    $this->router->get('/error', 'MainController:error');
+    $this->router->get('/error', 'Main:error');
 
     //migrations
-    $this->router->get('/migration', 'MigrationController:create');
-
-    //create controller
-    $this->router->get('/controller', 'MainController:controller');
-    $this->router->post('/controller/create', 'CreateController:create');
+    $this->router->get('/migration', 'Migration:create');
 
     $this->router->dispatch();
 
@@ -42,7 +38,7 @@ class Routing
     if (isset($_SESSION['user'])) {
       return $controller;
     } else {
-      return 'WebController:home';
+      return 'Main:index';
     }
   }
 }
