@@ -11,7 +11,7 @@ class Main extends View
    */
   public function index()
   {
-    echo $this->view->render('main/home');
+    echo $this->view->render('main/index');
   }
 
   /** 
