@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Core\Migration;
 use App\Core\View;
 
 class Main extends View
@@ -12,6 +13,15 @@ class Main extends View
   public function index()
   {
     echo $this->view->render('main/index');
+  }
+
+  /**
+   * migration
+   */
+  public function migration()
+  {
+    $migration = new Migration();
+    $migration->execute();
   }
 
   /** 

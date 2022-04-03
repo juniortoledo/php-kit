@@ -4,8 +4,6 @@ namespace App\Routes;
 
 use CoffeeCode\Router\Router;
 
-use function App\Config\session;
-
 class Routing
 {
   public $router;
@@ -22,7 +20,7 @@ class Routing
     $this->router->get('/error', 'Main:error');
 
     //migrations
-    $this->router->get('/migration', 'Migration:create');
+    $this->router->get('/migration', 'Main:migration');
 
     $this->router->dispatch();
 

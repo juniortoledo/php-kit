@@ -1,11 +1,11 @@
 <?php
 
-define('URL', 'http://localhost/php-kit/');
+define('URL', 'http://localhost/imobza/');
 define('ASSETS', URL . 'assets/');
 
 define('CONN', [
-  'host' => '',
-  'username' => '',
-  'password' => '',
-  'dbname' => ''
+  'host' => 'localhost',
+  'username' => 'admin',
+  'password' => '123',
+  'dbname' => 'imobza'
 ]);
