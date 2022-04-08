@@ -2,7 +2,7 @@
 
 namespace App\Core;
 
-use App\Database\Conn;
+use App\Core\Conn;
 
 class Model extends Conn
 {
