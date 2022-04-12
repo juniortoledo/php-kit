@@ -14,7 +14,11 @@
 
 ```sh
 git clone https://github.com/juniortoledo/php-kit/
+```
+```sh
 cd php-kit
+```
+```sh
 composer update
 ```
 
