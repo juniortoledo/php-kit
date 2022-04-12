@@ -2,33 +2,25 @@
 
 namespace App\Controllers;
 
-use App\Core\Migration;
-use App\Core\View;
+use App\Core\Controller;
 
-class Main extends View
+class Main extends Controller
 {
   /**
    * view index
    */
   public function index()
   {
-    echo $this->view->render('main/index');
+    // render view
+    self::render('index');
   }
 
   /**
-   * migration
-   */
-  public function migration()
-  {
-    $migration = new Migration();
-    $migration->execute();
-  }
-
-  /** 
    * view error
    */
   public function error()
   {
-    echo $this->view->render('main/error');
+    // render error
+    self::render('error');
   }
 }

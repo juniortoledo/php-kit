@@ -1,4 +1,4 @@
-<?= $this->layout('main/_template') ?>
+<?= $this->layout('_template') ?>
 
 <div class="container">
   <div class="row mt-5">
@@ -6,7 +6,7 @@
       <!-- title -->
       <h3>WELCOME TO</h3>
       <h1>PHP - Kit</h1>
-      <p>Minimum development kit</p>
+      <p>Minimum development kit for web apps</p>
 
     </div>
     <!-- row -->

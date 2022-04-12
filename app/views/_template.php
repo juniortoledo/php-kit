@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PHP - Kit</title>
   <!-- bootstrap 5 -->
-  <link rel="stylesheet" href="<?= URL ?>assets/css/bootstrap.css">
+  <link rel="stylesheet" href="<?= CSS ?>bootstrap.css">
 </head>
 <body>
 
   <?= $this->section('content') ?>
   
   <!-- bootstrap js 5 -->
-  <script src="<?= URL ?>assets/js/bootstrap.js"></script>
+  <script src="<?= JS ?>bootstrap.js"></script>
 </body>
 </html>

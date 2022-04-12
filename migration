@@ -1,22 +1,23 @@
 <?php
 
-namespace App\Core;
+require __DIR__ . "/vendor/autoload.php";
 
-use App\Core\Conn;
+use App\Core\Model;
 use Opis\Database\Schema\CreateTable;
 
-class Migration extends Conn
+class Migration extends Model
 {
   public function execute()
   {
     // check if table exists
-    if (!$this->db()->schema()->hasTable('users')) {
-      $this->db()->schema()->create('users', function (CreateTable $table) {
+    if (!self::db()->schema()->hasTable('users')) {
+      self::db()->schema()->create('users', function (CreateTable $table) {
         $table->integer('id')->primary()->autoincrement();
         $table->text('name')->notNull();
         $table->text('email')->notNull();
         $table->text('passwd')->notNull();
         $table->text('created_at');
+        $table->text('updated_at');
       });
     }
 
@@ -24,3 +25,6 @@ class Migration extends Conn
     echo 'migrations completed';
   }
 }
+
+$migration = new Migration();
+$migration->execute();

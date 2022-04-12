@@ -13,30 +13,17 @@ class Routing
     $this->router = new Router(URL);
     $this->router->namespace('App\Controllers');
 
-    //web
+    // home
     $this->router->get('/', 'Main:index');
 
-    //erros
+    // route erros
     $this->router->get('/error', 'Main:error');
-
-    //migrations
-    $this->router->get('/migration', 'Main:migration');
 
     $this->router->dispatch();
 
-    //rota para erros, urls não existenste
+    // erros
     if ($this->router->error()) {
       $this->router->redirect('/error');
-    }
-  }
-
-  /** auth routes */
-  public function auth($controller)
-  {
-    if (isset($_SESSION['user'])) {
-      return $controller;
-    } else {
-      return 'Main:index';
     }
   }
 }
