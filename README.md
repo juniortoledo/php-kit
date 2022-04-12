@@ -6,27 +6,25 @@
 
 - MVC
 - Routes
-- Database
+- ORM
 - Image uploading
+- Api
 
 ## Installation
 
 ```sh
 git clone https://github.com/juniortoledo/php-kit/
 cd php-kit
-composer install
+composer update
 ```
 
-## Package
+## Official documentation
 
 | Package | Docs |
 | ------ | ------ |
 | coffeecode/route | https://github.com/robsonvleite/router |
 | opis/database  | https://opis.io/database/4.x/ |
 | league/plates | https://github.com/thephpleague/plates |
-
-## License
-
-MIT
+| vlucas/phpdotenv | https://github.com/vlucas/phpdotenv |
 
 **Free Software, Hell Yeah!**
