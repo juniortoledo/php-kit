@@ -10,10 +10,10 @@ class Controller
   /**
    * render views
    */
-  public function render($page)
+  public function render($page, $array = [])
   {
     $view = new Engine('app/views');
-    echo $view->render($page);
+    echo $view->render($page, $array);
   }
 
   /**
