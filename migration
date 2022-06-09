@@ -13,11 +13,11 @@ class Migration extends Model
     if (!self::db()->schema()->hasTable('users')) {
       self::db()->schema()->create('users', function (CreateTable $table) {
         $table->integer('id')->primary()->autoincrement();
-        $table->text('name')->notNull();
-        $table->text('email')->notNull();
-        $table->text('passwd')->notNull();
-        $table->text('created_at');
-        $table->text('updated_at');
+        $table->string('name')->notNull();
+        $table->string('email')->notNull();
+        $table->string('passwd')->notNull();
+        $table->string('created_at');
+        $table->string('updated_at');
       });
     }
 
